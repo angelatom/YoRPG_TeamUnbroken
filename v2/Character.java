@@ -30,9 +30,9 @@ public class Character{
     //calculates damage: damage = (strength * attack_rate) - warrior defense
     //warrior is an instance of Protagonist
     //return damage as an int
-    public int attack(Protagonist warrior) {
-	int damage = (int)((strength * attackRating) - warrior.getDefense());
-	warrior.lowerHP(damage);
+    public int attack(Character both) {
+	int damage = (int)((strength * attackRating) - both.getDefense());
+	both.lowerHP(damage);
 	return damage;
     }
 }
