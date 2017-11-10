@@ -5,14 +5,10 @@ HW28 -- Ye Olde Role Playing Game
 2017-11-08
 */
 
-public class Protagonist {
+public class Protagonist extends Character{
 
     // Instance vars
     private String name;    
-    private int health;    
-    private int strength;    
-    private int defense;    
-    private double attackRating;
     
     public static void main(String[] args) {
     }
@@ -26,33 +22,11 @@ public class Protagonist {
 	attackRating = 0.4;
     }
 
-    // Return boolean indicating living or dead
-    // Pre: null
-    // Post: boolean
-    public boolean isAlive() {
-	return (health > 0);
-    }
-
-
-    // Returns the value of defense attribute
-    // Pre: null
-    // Post: int
-    public int getDefense() {
-	return defense;
-    }
-
     // Returns the name attribute
     // Pre: null
     // Post: string
     public String getName() {
 	return name;
-    }
-
-    // Lowers the health attribute by the damage
-    // Pre: int   
-    // Post: void  
-    public void lowerHP(int damage) {
-	health -= damage;
     }
 
     //  Calculates the damage to the monster
