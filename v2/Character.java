@@ -1,5 +1,5 @@
 public class Character{
-    //Instance vars
+    //Instance vars --> changed to public to allow subclass to access
     public int health;    
     public int strength;    
     public int defense;    
@@ -26,10 +26,9 @@ public class Character{
 	health -= damage;
     }
 
-    //take Protagonist as a parameter
     //calculates damage: damage = (strength * attack_rate) - warrior defense
-    //warrior is an instance of Protagonist
-    //return damage as an int
+    //Pre: Character
+    //Post: int
     public int attack(Character both) {
 	int damage = (int)((strength * attackRating) - both.getDefense());
 	both.lowerHP(damage);

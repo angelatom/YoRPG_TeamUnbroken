@@ -5,6 +5,7 @@ HW28 -- Ye Olde Role Playing Game
 2017-11-08
 */
 
+//extends allow subclass Protagonist to have all attributes in Superclass Character
 public class Protagonist extends Character{
 
     // Instance vars
