@@ -9,7 +9,7 @@ HW28 -- Ye Olde Role Playing Game
 public class Protagonist extends Character{
 
     // Instance vars
-    private String name;    
+    protected String name;    
     
     public static void main(String[] args) {
     }

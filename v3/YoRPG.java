@@ -90,7 +90,7 @@ public class YoRPG
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name , subclass );
+    pat = new Protagonist( name, subclass);
 
   }//end newGame()
 
