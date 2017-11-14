@@ -6,6 +6,7 @@
     * Plague.java
     * Chimera.java
   * Protagonist.java
-    * 
-    *
+    * Warrior.java
+    * Mage.java
+    * Rogue.java
     *
