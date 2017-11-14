@@ -57,7 +57,6 @@ public class YoRPG
   {
     String s;
     String name = "";
-    String subclass = "";
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -72,15 +71,6 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
-    s = "Brave gender neutral protagonist, which class doth you choose?";
-
-    System.out.println( s );
-
-    try {
-	subclass = in.readLine();
-    }
-    catch (IOException e) { }
-
     s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
     System.out.print( s );
 
@@ -90,7 +80,7 @@ public class YoRPG
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name, subclass);
+    pat = new Protagonist( name );
 
   }//end newGame()
 
