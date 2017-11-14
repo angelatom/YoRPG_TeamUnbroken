@@ -14,6 +14,14 @@ public class Protagonist extends Character{
     public static void main(String[] args) {
     }
 
+    public Protagonist( ) {
+	name  = "Gender Neutral Pat";
+	health = 125;
+	strength = 100;
+	defense = 40;
+	attackRating = 0.4;
+    }
+
     // Constructor that creates the protagonist and initializes the attributes
     public Protagonist( String myName) {
 	name  = myName;

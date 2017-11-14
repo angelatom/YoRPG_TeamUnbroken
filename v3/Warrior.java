@@ -23,6 +23,6 @@ public class Warrior extends Protagonist {
     // Pre: null
     // Post: String
     public static String about() {
-	return "The warrior is an old, faithful class that can be relied on due to its great power in strength";s 
+	return "The warrior is an old, faithful class that can be relied on due to its great power in strength";
     }
 }

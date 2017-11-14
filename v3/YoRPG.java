@@ -20,7 +20,7 @@ public class YoRPG {
     public final static int MAX_ENCOUNTERS = 5;
 
     //each round, a Warrior and a Monster will be instantiated
-    private Character pat;   //Is it man or woman?
+    private Protagonist pat;   //Is it man or woman?
     private Monster smaug; //Friendly generic monster name, eh?
 
     private int moveCount;
@@ -60,7 +60,7 @@ public class YoRPG {
 
         // Loop until valid difficulty
         while (difficulty > 4 || difficulty < 1) {
-            s = "\nChoose your difficulty: \n";
+            s += "\nChoose your difficulty: \n";
             s += "\t1: Easy\n";
             s += "\t2: Not so easy\n";
             s += "\t3: Beowulf hath nothing on me. Bring it on.\n";
@@ -94,14 +94,15 @@ public class YoRPG {
 	} catch ( IOException e ) { }
 
         if (playerClass == 1) {
-            pat = new Warrior(name);
+            pat = new Warrior();
+	    System.out.println(Warrior.about());
         } else if (playerClass == 2) {
-            pat = new Rogue(name);
+	    pat = new Mage();
+	    System.out.println(Mage.about());
         } else if (playerClass == 3) {
-            pat = new Mage(name);
+             pat = new Rogue();
+	    System.out.println(Rogue.about());
         }
-        System.out.println(pat.about());
-
     }//end newGame()
 
 
@@ -109,7 +110,7 @@ public class YoRPG {
       boolean playTurn -- simulates a round of combat
       pre:  Warrior pat has been initialized
       post: Returns true if player wins (monster dies).
-            Returns false if monster wins (player dies).
+      Returns false if monster wins (player dies).
       =============================================*/
     public boolean playTurn() {
 
@@ -145,7 +146,7 @@ public class YoRPG {
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack( pat );
 
-		System.out.println( pat.getName() + " dealt " + d1 +
+		System.out.println( "You dealt " + d1 +
 				    " points of damage.");
 
 		System.out.println( "Ye Olde Monster hit back for " + d2 +
