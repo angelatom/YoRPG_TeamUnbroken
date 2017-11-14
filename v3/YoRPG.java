@@ -1,7 +1,7 @@
-// Team Excalibur - Andrew Lin, James Wang, Owen Zeng
-// APCS1 pd9
-// HW#30 -- Ye Olde Role Playing Game, Expanded
-// 2015-11-13
+// Team Unbroken -- Bing Li, Jackie Li, Angela Tom
+//APCS01 pd02
+//HW#31 : Ye Olde Role Playing Game, Expanded
+//2017-11-13
 
 /*=============================================
   class YoRPG -- Driver file for Ye Olde Role Playing Game.
