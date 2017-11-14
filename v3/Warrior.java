@@ -8,6 +8,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 // Subclass warrior will inherit from superclass Protagonist
 public class Warrior extends Protagonist {
 
+	private String name;
+	
     // Constructor that creates warrior and initializes the attributes
     public Warrior() {
 	name = "Warrior";
@@ -21,6 +23,6 @@ public class Warrior extends Protagonist {
     // Pre: null
     // Post: String
     public static String about() {
-	return "The warrior is an old, faithful class that can be relied on due to its great power in strength" 
+	return "The warrior is an old, faithful class that can be relied on due to its great power in strength";s 
     }
 }

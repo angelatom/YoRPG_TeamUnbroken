@@ -8,6 +8,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 // Subclass mage will inherit from superclass Protagonist
 public class Mage extends Protagonist {
 
+	private String name;
+	
     // Constructor that creates mage and initializes the attributes
     public Mage() {
 	name = "Mage";
@@ -21,6 +23,6 @@ public class Mage extends Protagonist {
     // Pre: null
     // Post: String
     public static String about() {
-	return "The mage uses its magicical powers for a huge health boost." 
+	return "The mage uses its magicical powers for a huge health boost."; 
     }
 }

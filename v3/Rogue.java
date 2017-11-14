@@ -8,6 +8,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 // Subclass rogue will inherit from superclass Protagonist
 public class Rogue extends Protagonist {
 
+	private String name;
+	
     // Constructor that creates warrior and initializes the attributes
     public Rogue() {
 	name = "Rogue";
@@ -21,6 +23,6 @@ public class Rogue extends Protagonist {
     // Pre: null
     // Post: String
     public static String about() {
-	return "The rogue is a classic with a low, modest boost in every aspect" 
+	return "The rogue is a classic with a low, modest boost in every aspect"; 
     }
 }
