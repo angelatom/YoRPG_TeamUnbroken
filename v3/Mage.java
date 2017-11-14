@@ -9,8 +9,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 public class Mage extends Protagonist {
 
     // Constructor that creates mage and initializes the attributes
-    public Mage(String mage) {
-	super();
+    public Mage() {
+	name = "Mage";
 	strength -= 10;
 	defense -= 10;
 	health += 200;

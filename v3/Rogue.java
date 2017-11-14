@@ -9,8 +9,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 public class Rogue extends Protagonist {
 
     // Constructor that creates warrior and initializes the attributes
-    public Rogue(String rogue) {
-	super();
+    public Rogue() {
+	name = "Rogue";
 	strength += 25;
 	defense += 25;
 	health += 25;

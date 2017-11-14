@@ -9,8 +9,8 @@ HW31 -- Ye Olde Role Playing Game, Expanded
 public class Warrior extends Protagonist {
 
     // Constructor that creates warrior and initializes the attributes
-    public Warrior(String warrior) {
-	super();
+    public Warrior() {
+	name = "Warrior";
 	strength += 70;
 	defense += 10;
 	health -= 25;
