@@ -1,4 +1,5 @@
 # YoRPG_TeamUnbroken
+### Team member: Angela Tom, Bing Li, Jackie Li
 * YoRPG.java (Driver class)
 * Character.java
   * Monster.java 
