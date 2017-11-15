@@ -7,8 +7,8 @@ HW31 -- Ye Olde Role Playing Game Expanded
 
 
 public class Boss extends Monster {
-    private String name;
 
+    //default contructor
     public Boss() {
 	name = "Boss";
 	health = 200;
@@ -17,6 +17,9 @@ public class Boss extends Monster {
 	attackRating = 1.5;
     }
 
+    //pre: void
+    //post: String
+    //return the description of your monster
     public static String about() {
 	return "Oh no! The final boss is here! It is almost impossble to beat because it has elevated all aspects of its traits.";
     }

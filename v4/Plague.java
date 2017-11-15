@@ -7,8 +7,8 @@ HW31 -- Ye Olde Role Playing Game Expanded
 
 
 public class Plague extends Monster {
-    private String name;
 
+    //default constructor
     public Plague() {
 	name = "Plague Doctor";
 	health = 200;
@@ -17,6 +17,9 @@ public class Plague extends Monster {
 	attackRating = 1;
     }
 
+    //pre:void
+    //post:String
+    //return the description of the monster Plague
     public static String about() {
 	return "Beware of the legendary Plauge Doctor! This type of monster has extremely high HP (200) and increased strength in attack (20 more than regular monster).";
     }
