@@ -14,6 +14,7 @@ public abstract class Protagonist extends Character{
     public static void main(String[] args) {
     }
 
+    // Constructor for protagonist with no parameters
     public Protagonist( ) {
 	name  = "Gender Neutral Pat";
 	health = 125;
@@ -24,22 +25,20 @@ public abstract class Protagonist extends Character{
 
     // Constructor that creates the protagonist and initializes the attributes
     public Protagonist( String myName) {
+	this();
 	name  = myName;
-	health = 125;
-	strength = 100;
-	defense = 40;
-	attackRating = 0.4;
     }
 
-    // Returns the name attribute
-    // Pre: null
-    // Post: string
-
-
+    // Abstract about method
+    // Post: String
     public abstract  String about();
 
+    // Abstract specialize method
+    // Post: null
     public abstract void specialize();
- 
+
+    // Abstract normaliza method
+    // Post: null
     public abstract void normalize();
 
     

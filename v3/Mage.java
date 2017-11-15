@@ -12,6 +12,7 @@ public class Mage extends Protagonist {
 	
     // Constructor that creates mage and initializes the attributes
     public Mage() {
+	super();
 	name = "Mage";
 	strength -= 10;
 	defense -= 10;

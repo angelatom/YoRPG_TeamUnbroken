@@ -17,7 +17,7 @@ public class Warrior extends Protagonist {
 	attackRating += .3;
     }
 
-      // Prepares the Warrior to perform a special attack by decreasing defense and increasing attack
+      // Prepares the Warrior to perform a special attack by decreasing defense and increasing strength
     // Pre: null
     // Post: void
     public void specialize() {
@@ -25,7 +25,7 @@ public class Warrior extends Protagonist {
 	strength += (int)(Math.random() * 3);
     }
 
-    // Prepares the Warrior to perform a normal attack by resetting defense and attack attributes
+    // Prepares the Warrior to perform a normal attack by resetting defense and attack rating attributes
     // Pre: null
     // Post: void
     public void normalize() {
