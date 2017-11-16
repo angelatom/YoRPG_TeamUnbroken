@@ -12,15 +12,15 @@ public class Boss extends Monster {
     public Boss() {
 	name = "Boss";
 	health = 200;
-	strength = (int)((Math.random() * 85) + 20);
-	defense = 40;
-	attackRating = 1.5;
+	strength = (int)((Math.random() * 45) + 35);
+	defense = 30;
+	attackRating = 1.3;
     }
 
     //pre: void
     //post: String
     //return the description of your monster
-    public static String about() {
+    public String about() {
 	return "Oh no! The final boss is here! It is almost impossble to beat because it has elevated all aspects of its traits.";
     }
 }

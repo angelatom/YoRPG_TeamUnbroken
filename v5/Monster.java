@@ -7,10 +7,10 @@ HW28 -- Ye Olde Role Playing Game
 
 
 //extends allow subclass Monster to have all attributes in Superclass Character
-public class Monster extends Character{
+public abstract class Monster extends Character{
 
     //created instance variables containing attributes of monster
-    private String name;
+    protected String name;
 
     //default constructor --> initializing all attribues
     public Monster() {
@@ -21,10 +21,7 @@ public class Monster extends Character{
 	attackRating = 1;
     }
 
-    //accessor: returns value of name attribute
-    public String getName() {
-	return name;
-    }
+    public abstract String about();
 
     
 }

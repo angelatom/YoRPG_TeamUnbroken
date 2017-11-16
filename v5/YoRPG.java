@@ -12,6 +12,7 @@
 import java.io.*;
 import java.util.*;
 
+
 public class YoRPG {
 
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
@@ -27,9 +28,11 @@ public class YoRPG {
     private boolean gameOver;
     private int difficulty = -1;
     private int playerClass = -1;
+    private String monName = "";
 
     private InputStreamReader isr;
     private BufferedReader in;
+  
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -93,16 +96,32 @@ public class YoRPG {
 	    name = in.readLine();
 	} catch ( IOException e ) { }
 
+	//generate protagonist based on user input
         if (playerClass == 1) {
             pat = new Warrior();
-	    System.out.println(pat.about());
+	    System.out.println("Info about your character: " + pat.about() + "\n");
         } else if (playerClass == 2) {
 	    pat = new Mage();
-	    System.out.println(pat.about());
+	    System.out.println("Info about your character: " + pat.about() + "\n");
         } else if (playerClass == 3) {
              pat = new Rogue();
-	    System.out.println(pat.about());
+	     System.out.println("Info about your character: " + pat.about() + "\n");
         }
+
+        //generate random monster
+	int randMon = (int)(Math.random()*3);
+	if (randMon == 0) {
+	    smaug = new Plague();
+	    monName += "Plague";    
+	} else if (randMon == 1) {
+	    smaug = new Chimera();
+	    monName += "Chimera";
+	} else if (randMon == 2) {
+	    smaug = new Boss();
+	    monName += "Boss";
+	}
+	    
+	
     }//end newGame()
 
 
@@ -121,9 +140,9 @@ public class YoRPG {
 	    System.out.println( "Nothing to see here. Move along!" );
 
 	else {
-	    System.out.println( "Lo, yonder monster approacheth!" );
-
-	    smaug = new Monster();
+	    System.out.println( "Lo, yonder " + monName + " approacheth!" );
+	    
+	    System.out.println("Info about your opponent: " + smaug.about());
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
