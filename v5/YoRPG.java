@@ -112,13 +112,13 @@ public class YoRPG {
 	int randMon = (int)(Math.random()*3);
 	if (randMon == 0) {
 	    smaug = new Plague();
-	    monName += "Plague";    
+	    monName = "Plague";    
 	} else if (randMon == 1) {
 	    smaug = new Chimera();
-	    monName += "Chimera";
+	    monName = "Chimera";
 	} else if (randMon == 2) {
 	    smaug = new Boss();
-	    monName += "Boss";
+	    monName = "Boss";
 	}
 	    
 	
@@ -183,6 +183,17 @@ public class YoRPG {
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
 		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+		int randMon = (int)(Math.random()*3);
+		if (randMon == 0) {
+		    smaug = new Plague();
+		    monName = "Plague";    
+		} else if (randMon == 1) {
+		    smaug = new Chimera();
+		    monName = "Chimera";
+		} else if (randMon == 2) {
+		    smaug = new Boss();
+		    monName = "Boss";
+		}
 		return true;
 	    }
 	    //option 3: the beast slays you
