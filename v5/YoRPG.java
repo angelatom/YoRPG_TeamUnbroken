@@ -49,6 +49,24 @@ public class YoRPG {
 
     // ~~~~~~~~~~~~~~ METHODS ~~~~~~~~~~~~~~~~~~~
 
+    /* void genMonster() -- generating a random monster
+       pre:
+       post: makes smaug a random monster
+    */
+    public void genMonster() {
+        int randMon = (int)(Math.random()*3);
+	if (randMon == 0) {
+	    smaug = new Plague();
+	    monName = "Plague";    
+	} else if (randMon == 1) {
+	    smaug = new Chimera();
+	    monName = "Chimera";
+	} else if (randMon == 2) {
+	    smaug = new Boss();
+	    monName = "Boss";
+	}
+    }
+    
     /*=============================================
       void newGame() -- facilitates info gathering to begin a new game
       pre:
@@ -108,20 +126,8 @@ public class YoRPG {
 	     System.out.println("Info about your character: " + pat.about() + "\n");
         }
 
-        //generate random monster
-	int randMon = (int)(Math.random()*3);
-	if (randMon == 0) {
-	    smaug = new Plague();
-	    monName = "Plague";    
-	} else if (randMon == 1) {
-	    smaug = new Chimera();
-	    monName = "Chimera";
-	} else if (randMon == 2) {
-	    smaug = new Boss();
-	    monName = "Boss";
-	}
-	    
-	
+	// Makes the monster
+	genMonster();
     }//end newGame()
 
 
@@ -183,17 +189,7 @@ public class YoRPG {
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
 		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
-		int randMon = (int)(Math.random()*3);
-		if (randMon == 0) {
-		    smaug = new Plague();
-		    monName = "Plague";    
-		} else if (randMon == 1) {
-		    smaug = new Chimera();
-		    monName = "Chimera";
-		} else if (randMon == 2) {
-		    smaug = new Boss();
-		    monName = "Boss";
-		}
+		genMonster();
 		return true;
 	    }
 	    //option 3: the beast slays you
